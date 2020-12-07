@@ -67,9 +67,10 @@ section.about-mark > p {
     margin: 1px;
 }
 
-main {
+.background-container {
     background-color: var(--primary);
     margin-left: 50px;
+    border-radius: 4px;
 }
 
 section.projects {
@@ -132,9 +133,13 @@ a:hover {
 }
 
 .contact h2 {
-    margin-left: 10px;
-    /* border: 2px solid gray; */
+    margin-left: 50px;
     width: 150px;
+}
+
+.contact {
+    
+    max-width: 300px;
 }
 
 footer {
