@@ -4,7 +4,10 @@
 }
 
 hr {
-    border: 1px solid var(--secondary);
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px solid var(--secondary);
 }
 
 body {
@@ -20,6 +23,7 @@ header {
     justify-content: flex-end;
     align-items: flex-end;
     width: 100%;
+    margin-right: 100px;
 }
 
 header > ul {
@@ -67,10 +71,17 @@ section.about-mark > p {
     margin: 1px;
 }
 
+.header-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
 .background-container {
     background-color: var(--primary);
     margin-left: 50px;
     border-radius: 4px;
+    float: right;
 }
 
 section.projects {
@@ -95,13 +106,17 @@ section > div.project1 {
 }
 
 section .project-links {
-    /* display: flex;
+     display: flex;
     flex-direction: row;
-    justify-content: center; */
+    justify-content: center;
     text-align: center;
     margin-top: 20px;
     list-style: none;
-    
+}
+
+section ul.project-links li {
+    padding-top: 30px;
+    padding-left: 10px;
 }
 
 ul.project-links {
@@ -148,17 +163,35 @@ footer {
     height: 30px;
 }
 
-@media all and (max-width: 440px) {
+@media all and (min-width: 1300px) {
+    header {
+        margin-right: 250px;
+    }
+}
+
+@media all and (min-width: 590px) and (max-width: 1065px) {
+    header {
+        margin-right: 30px;
+    }
+}
+
+@media all and (max-width: 590px) {
     header > ul {
         list-style: none;
         display: flex;
         flex-direction: column;
         padding: 5px;
-        margin: 5px;
         justify-content: center;
         align-items: center;
         width: 100%;
     }
+
+    header {
+        margin-right: 0;
+    }
+}
+
+@media all and (max-width: 440px) {
 
     section.about-mark {
         display: flex;
