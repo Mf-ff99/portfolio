@@ -29,13 +29,27 @@ header {
 header > ul {
     list-style: none;
     display: flex;
+    flex-direction: column;
+    padding: 5px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+header {
+    margin-right: 0;
+}
+/* 
+header > ul {
+    list-style: none;
+    display: flex;
     flex-direction: row;
     padding: 5px;
     margin: 5px;
     justify-content: center;
     align-items: center;
     width: 100%;
-}
+} */
 
 header > ul > li {
     padding: 5px;
@@ -55,12 +69,17 @@ header > ul > li.dot {
 
 section.about-mark {
     display: flex;
+    flex-direction: column;
+}
+
+/* section.about-mark {
+    display: flex;
     justify-content: space-around;
     align-items: center;
     margin: 50px 5px 10px 20px;
     max-width: 700px;
     padding-right: 30px;
-}
+} */
 
 section.about-mark > img {
     padding: 5px;
@@ -175,26 +194,27 @@ footer {
     }
 }
 
-@media all and (max-width: 590px) {
-    header > ul {
-        list-style: none;
-        display: flex;
-        flex-direction: column;
-        padding: 5px;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
+@media all and (min-width: 590px) {
+header > ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+    margin: 5px;
+    align-items: center;
+    width: 100%;
     }
 
-    header {
-        margin-right: 0;
-    }
 }
 
-@media all and (max-width: 440px) {
-
+@media all and (min-width: 440px) {
     section.about-mark {
         display: flex;
-        flex-direction: column;
+        flex-direction: row !important;
+        justify-content: space-around;
+        align-items: center;
+        margin: 50px 5px 10px 20px;
+        max-width: 700px;
+        padding-right: 30px;
     }
 }
