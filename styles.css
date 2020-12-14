@@ -172,7 +172,6 @@ a:hover {
 }
 
 .contact {
-    
     max-width: 300px;
 }
 
@@ -180,6 +179,35 @@ footer {
     vertical-align: middle;
     text-align: center;
     height: 30px;
+}
+
+@media all and (min-width: 320px) and (max-width: 450px) {
+    .background-container {
+        background-color: var(--primary);
+        margin-left: 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 320px !important;
+        border-radius: 4px;
+        float: right;
+    }
+
+    section.projects {
+        margin-right: 0;
+        padding: 0;
+        max-width: 320px;
+    }
+
+    main {
+        max-width: 320px;
+    }
+
+    .contact {
+        margin: 0 !important;
+        padding: 0;
+        width: 320px;
+    }
 }
 
 @media all and (min-width: 1300px) {
@@ -204,7 +232,6 @@ header > ul {
     align-items: center;
     width: 100%;
     }
-
 }
 
 @media all and (min-width: 440px) {
